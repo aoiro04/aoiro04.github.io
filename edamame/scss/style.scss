@@ -1,0 +1,172 @@
+@use "_reset.scss";
+
+
+/* スタイル部分*/
+header{
+  text-align: center;
+  padding: 0 30px;
+}
+header>h1{
+  margin: 0 auto 20px;
+  width: 72px;
+}
+.tag-line{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* ナビゲーション部分 */
+.g-nav{
+  width: 100%;
+  height: 50px;
+  background-color: #0b4400;
+  margin-bottom: 50px;
+}
+.g-nav>ul{
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.g-nav li{
+  width: 25%;
+}
+.g-nav a{
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-right: 1px solid #fff;
+}
+.g-nav li:first-of-type>a{
+  border-left: 1px solid #fff;
+}
+.g-nav a:hover{
+  background-color: #188602;
+}
+
+
+.wrapper{
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto 100px;
+  justify-content: space-between;
+}
+main{
+  width: 60%;
+  margin-right: 30px;
+}
+
+main>h2{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.lead{
+  margin-bottom: 100px;
+}
+main>h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.food>h4{
+  font-size: 23px;
+}
+.food>img{
+  margin-bottom: 20px;
+}
+.food>p{
+  margin-bottom: 60px;
+}
+
+
+
+aside{
+  width: 34%;
+}
+aside>h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+aside>img{
+  margin-bottom: 20px;
+}
+
+
+footer{
+  background-color: #885800;
+  width: 100%;
+  padding-bottom: 30px;
+}
+footer>p{
+  text-align: center;
+  color: #fff;
+ padding: 30px 0;
+}
+.sns{
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sns>li{
+  width: 44px;
+  margin-right: 20px;
+}
+.sns>li:nth-of-type(3){
+  width: 38px;
+}
+
+
+
+
+
+
+/* 960px以下のスタイル */
+@media(max-width:960px){
+  .wrapper{
+    padding: 0 10px ;
+  }
+  .g-nav li:first-of-type>a{
+    border-left: 0;
+  }
+  .g-nav li:last-of-type>a{
+    border-right: 0;
+  }
+  .wrapper,.sns{
+    padding: 0 10px;
+  }
+}
+/* 640px以下のスタイル */
+@media(max-width:640px){
+  .wrapper{
+    display: block;
+    
+  }
+  main{
+    width: 100%;
+  }
+  aside{
+    width: 100%;
+  }
+  .g-nav{
+    height: 88px;/* 1段目44px、2段目44pxにするため */
+  }
+  .g-nav>ul{
+    flex-wrap: wrap;
+  }
+  .g-nav li{
+    width: 50%;
+    height: 44px;
+    margin: 0;
+  }
+ 
+  .g-nav li>a{
+    line-height: 44px;
+  }
+  .g-nav li:nth-of-type(2)>a{
+    border: 0;
+  }
+  .g-nav li:nth-of-type(n+3){
+    border-top: 1px solid #fff;
+  }
+}
