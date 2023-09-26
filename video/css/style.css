@@ -16,7 +16,7 @@ header{
 }
 h1{
   font-family: 'Archivo Black', sans-serif;
-  font-size: 200px;
+  font-size: 16vw;/* 文字サイズを可変にする */
   background: url(../img/header.gif)no-repeat center bottom / cover;/* 背景を入れる */
   -webkit-background-clip: text;
   background-clip: text;/* クリッピング */
